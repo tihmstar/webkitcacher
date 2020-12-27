@@ -73,6 +73,11 @@ int main_r(int argc, const char * argv[]) {
         argv += optind;
         lastArg = argv[0];
     }
+    
+    if (!url && !directory && !redirects.size()) {
+        cmd_help();
+        return 0;
+    }
 
     WebkitCacher wk(lastArg);
 
