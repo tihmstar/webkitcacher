@@ -23,10 +23,10 @@ static struct option longopts[] = {
 void cmd_help(){
     printf("Usage: webkitcacher [OPTIONS] <ApplicationCache.db file>\n");
     printf("Creates webkit ApplicationCache.db from directory\n\n");
-    printf("  -h, --help\t\t\tprints usage information\n");
-    printf("  -d, --dir <directory>\t\tdirectory to cache\n");
-    printf("  -u, --url <url>\t\tURL where cached content will be accessible\n");
-    printf("  -r, --redirect <srcurl=dsturl>\t\tadds a redirect from srcurl to cached dsturl\n");
+    printf("  -h, --help\t\t\t\tprints usage information\n");
+    printf("  -d, --dir <directory>\t\t\tdirectory to cache\n");
+    printf("  -u, --url <url>\t\t\tURL where cached content will be accessible\n");
+    printf("  -r, --redirect <srcurl=dsturl>\tadds a redirect from srcurl to cached dsturl\n");
 }
 
 int main_r(int argc, const char * argv[]) {
