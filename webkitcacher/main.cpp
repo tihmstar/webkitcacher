@@ -26,7 +26,7 @@ void cmd_help(){
     printf("  -h, --help\t\t\tprints usage information\n");
     printf("  -d, --dir <directory>\t\tdirectory to cache\n");
     printf("  -u, --url <url>\t\tURL where cached content will be accessible\n");
-    printf("  -r, --redirect <srcurl:dsturl>\t\tadds a redirect from srcurl to cached dsturl\n");
+    printf("  -r, --redirect <srcurl=dsturl>\t\tadds a redirect from srcurl to cached dsturl\n");
 }
 
 int main_r(int argc, const char * argv[]) {
@@ -56,7 +56,7 @@ int main_r(int argc, const char * argv[]) {
             case 'r':
                 {
                     std::string cmd = optarg;
-                    ssize_t columnpos = cmd.find(":");
+                    ssize_t columnpos = cmd.find("=");
                     retassure(columnpos != std::string::npos, "redirect commdn '%s' has invalid format",optarg);
                     redirects.push_back({cmd.substr(0,columnpos),cmd.substr(columnpos+1)});
                 }
