@@ -72,9 +72,6 @@ int main_r(int argc, const char * argv[]) {
         argc -= optind;
         argv += optind;
         lastArg = argv[0];
-    }else{
-        cmd_help();
-        return -2;
     }
 
     WebkitCacher wk(lastArg);
