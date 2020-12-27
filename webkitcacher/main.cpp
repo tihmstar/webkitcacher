@@ -34,7 +34,7 @@ int main_r(int argc, const char * argv[]) {
     
     const char *directory = NULL;
     const char *url = NULL;
-    const char *lastArg = NULL;
+    const char *lastArg = "ApplicationCache.db";
 
     int optindex = 0;
     int opt = 0;
