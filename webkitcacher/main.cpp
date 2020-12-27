@@ -77,10 +77,12 @@ int main_r(int argc, const char * argv[]) {
     WebkitCacher wk(lastArg);
 
     if (url && directory) {
+        printf("Caching directoy '%s' to URL '%s'\n",directory,url);
         wk.cacheDirectory(url, directory);
     }
     
     for (auto r : redirects) {
+        printf("Redirecting '%s' to '%s'\n",r.first.c_str(),r.second.c_str());
         wk.addRedirect(r.first, r.second);
     }
     printf("done!\n");
